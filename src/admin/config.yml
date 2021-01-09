@@ -12,6 +12,21 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - label: "Works"
+    name: "work"
+    folder: "src/works"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Private Notes", name: "notes", widget: "markdown" }
+      - { label: "Production Year / Year Start", name: "year-start", widget: "number", value_type: "int" }
+      - { label: "Year End (if applicable)", name: "year-end", widget: "number", value_type: "int" }
+      - { label: "Width", name: "width", widget: "number", value_type: "int" }
+      - { label: "Height", name: "height", widget: "number", value_type: "int" }
+      - { label: "Main Image", name: "image", widget: "image" }
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
