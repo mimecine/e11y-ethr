@@ -1,0 +1,22 @@
+---
+---
+{% extends "_includes/default.njk" %}
+{%block head%}
+
+{%endblock%}
+{% block title %}Edlef Romeny{% endblock %}
+
+{% block main %}
+	{% for p in collections.works  %}
+	{% if p.image  %}
+	<a href="/p/{{p.id}}" data-year="{{p.Year}}" data-category="{{p.Category}}" data-dimensions="{{p.Dimensions}}">
+		<div class="card">
+			<div class="visual"> 
+				<img src="{{p.image}}" loading="lazy">
+			</div>
+		</div>
+	</a> 
+	{% endif %}
+	{% endfor %}	
+{% endblock %}
+
