@@ -24,10 +24,10 @@ collections:
       - { label: "Location", name: "location", widget: "string", required: false  }
       - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Private Notes", name: "notes", widget: "markdown", required: false  }
-      - { label: "Production Year / Year Start", name: "year-start", widget: "number", value_type: "int", required: false }
-      - { label: "Year End (if applicable)", name: "year-end", widget: "number", value_type: "int", required: false }
-      - { label: "Width", name: "width", widget: "number", value_type: "int", required: false }
-      - { label: "Height", name: "height", widget: "number", value_type: "int", required: false }
+      - { label: "Production Year / Year Start", name: "year_start", widget: "number", value_type: "int", required: false }
+      - { label: "Year End (if applicable)", name: "year_end", widget: "number", value_type: "int", required: false }
+      - { label: "Width", name: "w", widget: "number", value_type: "int", required: false }
+      - { label: "Height", name: "h", widget: "number", value_type: "int", required: false }
       - { label: "Main Image", name: "image", widget: "image", required: false }
   - label: "Blog"
     name: "blog"
