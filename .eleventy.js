@@ -44,6 +44,18 @@ module.exports = function (eleventyConfig) {
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
+  // Shortcodes
+  eleventyConfig.addShortcode("version", function () {
+                return String(Date.now());
+  });
+  eleventyConfig.addShortcode("contains", function (str, sub) {
+                return String(str).indexOf(sub) != -1;
+  });
+  eleventyConfig.addFilter("xslug", function (str) {
+                return String(str).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/,'');
+  });
+
+
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead

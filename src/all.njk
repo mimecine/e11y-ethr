@@ -1,6 +1,6 @@
 ---
 ---
-{% extends "_includes/default.njk" %}
+{% extends "./_includes/default.njk" %}
 {%block head%}
 
 {%endblock%}
@@ -8,11 +8,11 @@
 
 {% block main %}
 	{% for p in collections.works  %}
-	{% if p.image  %}
-	<a href="/p/{{p.id}}" data-year="{{p.Year}}" data-category="{{p.Category}}" data-dimensions="{{p.Dimensions}}">
+	{% if p.data.image  %}
+	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}">
 		<div class="card">
 			<div class="visual"> 
-				<img src="{{p.image}}" loading="lazy">
+				<img src="{{p.data.image}}" loading="lazy">
 			</div>
 		</div>
 	</a> 
