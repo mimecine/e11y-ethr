@@ -31,6 +31,6 @@ jobs:
           # Arguments to pass to the Eleventy invocation
           args: # optional
           # If set to `true`, `npm install` will be run before Eleventy is invoked
-          install_dependencies: # optional
+          install_dependencies: true
 
 
