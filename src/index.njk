@@ -7,16 +7,23 @@
 {% block title %}Edlef Romeny{% endblock %}
 
 {% block main %}
+	<div class="flex flex-wrap justify-between m-auto place-self-center">
 	{% for p in collections.works  %}
 	{% if p.data.image  %}
-	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}">
-		<div class="card">
-			<div class="visual"> 
-				<img src="https://ik.imagekit.io/mimecom/ethr/tr:w-300/{{p.data.image}}" loading="lazy">
-			</div>
-		</div>
+
+
+	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}" class="m-2 grid place-items-center bg-gray-400">
+			<figure> 
+				<img
+					srcset=""
+					widths=""
+					src="https://ik.imagekit.io/mimecom/ethr/tr:w-300/{{p.data.image}}" 
+					loading="lazy" 
+					class="object-fit border border-red-500 p-2 w-full sm:w-auto h-auto sm:h-40">
+			</figure>
 	</a> 
 	{% endif %}
-	{% endfor %}	
+	{% endfor %}
+	</div>	
 {% endblock %}
 

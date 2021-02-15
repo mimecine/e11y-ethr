@@ -1,0 +1,13 @@
+{% extends "./default.njk" %}
+{# {% block title %}{% endblock %} #}
+{# {% block head %}{% endblock %} #}
+{# {%block header%}{%endblock%} #}
+{% block main %}
+  <div class="grid place-items-center">
+    <figure>
+      <img src="{{image}}" class="w-2/3 h-2/3 object-contain">
+      <figcaption>{{title}}, {{year_start}}</figcaption>
+    </figure>
+  </div>
+{% endblock %}
+{# {%block footer%}{%endblock%} #}

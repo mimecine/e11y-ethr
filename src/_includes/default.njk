@@ -12,16 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
-    <script src="/js/alpine.js?v={% version %}"></script>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script src="/static/js/alpine.js?v={% version %}"></script>
+    <link rel="stylesheet" href="/static/css/style.css?v={% version %}"/>
     {% block head %}{% endblock %}
   </head>
-  <body class="grid h-screen" style="grid-template-rows: auto 1fr auto;">
-    <header class="text-center">
-	    <h3>~ Edlef Romeny ~</h3>
+  <body class="grid h-screen">
+    <header class="text-center sticky top-0">
+	    <h3>~ <a href="/">Edlef Romeny</a> ~</h3>
       {%block header%}{%endblock%}
     </header>
-    <main class="grid  grid-cols-3 lg:grid-cols-6 justify-center content-center">
+    <main class="">
     {% block main %}
       {{ main | safe }}
     {% endblock %}
