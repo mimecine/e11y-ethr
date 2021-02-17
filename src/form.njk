@@ -4,13 +4,14 @@
 ---
 {% extends "./_includes/default.njk" %}
 {%block head%}
+<link rel="stylesheet" href="https://unpkg.com/mvp.css">
 
 {%endblock%}
 {% block title %}Form{% endblock %}
 
 {% block main %}
 
-<form method="POST" action="https://mimecom-staticman.herokuapp.com/v3/entry/github/mimecine/e11y-ethr/master/selections">
+<form method="POST" action="https://mimecom-staticman.herokuapp.com/v3/entry/github/mimecine/e11y-ethr/master/rooms">
   {# <input name="options[redirect]" type="hidden" value="https://my-site.com"> #}
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">

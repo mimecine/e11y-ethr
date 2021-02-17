@@ -7,6 +7,9 @@ module.exports = {
     },
   },
   theme: {
+    fontFamily:{
+      sans:['Inconsolata']
+    },
     container: {
       center: true,
     },
