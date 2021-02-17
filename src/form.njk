@@ -1,6 +1,14 @@
 
 
+---
+---
+{% extends "./_includes/default.njk" %}
+{%block head%}
 
+{%endblock%}
+{% block title %}Form{% endblock %}
+
+{% block main %}
 
 <form method="POST" action="https://mimecom-staticman.herokuapp.com/v3/entry/github/mimecine/e11y-ethr/master/selections">
   {# <input name="options[redirect]" type="hidden" value="https://my-site.com"> #}
@@ -13,3 +21,5 @@
   
   <button type="submit">Go!</button>
 </form>
+
+{%endblock%}
