@@ -29,6 +29,7 @@ collections:
       - { label: "Width", name: "w", widget: "number", value_type: "int", required: false }
       - { label: "Height", name: "h", widget: "number", value_type: "int", required: false }
       - { label: "Main Image", name: "image", widget: "image", required: false }
+
   - label: "Settings"
     name: "settings"
     editor:
