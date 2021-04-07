@@ -13,14 +13,18 @@
 
 
 	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}" class="m-2 grid place-items-center bg-gray-400">
+
+
+
 			<figure> 
-				<img
+          {% image p.data.image, p.data.title, "object-fit w-full sm:w-auto h-auto sm:h-40", "300px" %}
+				{# <img
 					srcset=""
 					widths=""
 					src="{{p.data.image}}"
 					dx-src="https://ik.imagekit.io/mimecom/ethr/tr:w-600/{{p.data.image}}" 
 					loading="lazy" 
-					class="object-fit w-full sm:w-auto h-auto sm:h-40">
+					class="object-fit w-full sm:w-auto h-auto sm:h-40"> #}
 			</figure>
 	</a> 
 	{% else%}
