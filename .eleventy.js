@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./github-CNAME":"./CNAME",
+    "./src/github-CNAME":"./CNAME",
     "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
