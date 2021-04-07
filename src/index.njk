@@ -9,7 +9,7 @@
 {% block main %}
 	<div class="flex flex-wrap justify-between m-auto place-self-center">
 	{% for p in collections.works  %}
-	{% if p.data.image  %}
+	{% if helpers.fx('./src'+p.data.image)  %}
 
 
 	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}" class="m-2 grid place-items-center bg-gray-400">
@@ -17,11 +17,14 @@
 				<img
 					srcset=""
 					widths=""
-					src="https://ik.imagekit.io/mimecom/ethr/tr:w-600/{{p.data.image}}" 
+					src="{{p.data.image}}"
+					dx-src="https://ik.imagekit.io/mimecom/ethr/tr:w-600/{{p.data.image}}" 
 					loading="lazy" 
-					class="object-fit border border-red-500 p-2 w-full sm:w-auto h-auto sm:h-40">
+					class="object-fit w-full sm:w-auto h-auto sm:h-40">
 			</figure>
 	</a> 
+	{% else%}
+		<span hidden>NO IMG</span>
 	{% endif %}
 	{% endfor %}
 	</div>	
