@@ -77,6 +77,7 @@ module.exports = function (eleventyConfig) {
     "./node_modules/reveal.js/dist/reveal.js":"./static/js/reveal.js",
     "./node_modules/reveal.js/dist/reset.css":"./static/css/reset.css",
     "./node_modules/reveal.js/dist/reveal.css":"./static/css/reveal.css",
+    "./node_modules/reveal.js/dist/theme/":"./static/css/theme",
   });
 
   // Copy Image Folder to /_site
