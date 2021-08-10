@@ -1,0 +1,38 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/reveal.css">
+    <link rel="stylesheet" href="/static/css/theme/black.css" id="theme">
+</head>
+<body>
+<div class="reveal"><div class="slides">    
+	{% for r in paintings_csv  %}
+        {%if r.File != '' %}
+    <section id="{{r.ID}}-{{r.Title}}">
+        <img src="http://static.do.mimecom.net/files/img_o/{{r.File}}">
+        {{ r|dump() }}
+    </section>
+        {%endif%}
+    {% endfor %}
+</div></div>
+<script src="/static/js/reveal.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        //plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+</script>
+</body>
+</html>

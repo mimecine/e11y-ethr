@@ -12,7 +12,7 @@
 	{% if helpers.fx('./src'+p.data.image)  %}
 
 
-	<a href="{{p.url}}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}" class="m-2 grid place-items-center bg-gray-400">
+	<a x-href="{{p.url}}" href="/deck/#/{{ helpers.slug([p.data.id,p.data.title].join(' ')) }}" data-year="{{p.data.year}}" data-category="{{p.data.category}}" data-dimensions="{{p.Dimensions}}" class="m-2 grid place-items-center bg-gray-400">
 
 
 
