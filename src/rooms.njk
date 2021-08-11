@@ -1,0 +1,13 @@
+---
+---
+{% extends "./_includes/default.njk" %}
+{%block head%}
+
+{%endblock%}
+{% block title %}Edlef Romeny - Rooms{% endblock %}
+
+{% block main %}
+{% for room in navigation  %}
+   1. {{ room }}
+{% endfor %}
+{%endblock%}
