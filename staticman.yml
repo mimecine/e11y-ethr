@@ -16,16 +16,16 @@ rooms:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
+  commitMessage: "Adding Room from {fields.email} (Staticman Form Submission)"
 
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "work-{fields.email}-{fields.name}-{@timestamp}"
+  filename: "room-{fields.email}-{fields.name}-{@timestamp}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
-  format: "json"
+  format: "frontmatter"
 
   # List of fields to be populated automatically by Staticman and included in
   # the data file. Keys are the name of the field. The value can be an object
@@ -40,7 +40,7 @@ rooms:
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
+  moderation: false
 
   # Name of the site. Used in notification emails.
   name: "ethr"
