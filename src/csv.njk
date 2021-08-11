@@ -9,15 +9,19 @@
     <title>Deck</title>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/reveal.css">
-    <link rel="stylesheet" href="/static/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="/static/css/theme/white.css" id="theme">
 </head>
 <body>
 <div class="reveal"><div class="slides">    
 	{% for r in paintings_csv  %}
         {%if r.File != '' %}
     <section id="{{r.ID}}-{{r.Title}}">
-        <img src="http://static.do.mimecom.net/files/img_o/{{r.File}}">
+        <section>
+            <img src="http://static.do.mimecom.net/files/img_o/{{r.File}}">
+        </section>
+        <section>
         {{ r|dump() }}
+        </section>
     </section>
         {%endif%}
     {% endfor %}
