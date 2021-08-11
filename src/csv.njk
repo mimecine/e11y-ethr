@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deck</title>
+    <title>Csv</title>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/reveal.css">
     <link rel="stylesheet" href="/static/css/theme/white.css" id="theme">
@@ -17,10 +17,10 @@
         {%if r.File != '' %}
     <section id="{{r.ID}}-{{r.Title}}">
         <section>
-            <img src="http://static.do.mimecom.net/files/img_o/{{r.File}}">
+            <img data-src="http://static.do.mimecom.net/files/img_o/{{r.File}}">
         </section>
         <section>
-        {{ r|dump() }}
+        <pre>{{ r|dump(2) }}</pre>
         </section>
     </section>
         {%endif%}
