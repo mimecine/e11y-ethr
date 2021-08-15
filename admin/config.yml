@@ -1,0 +1,68 @@
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: master
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+media_folder: "src/static/img"
+public_folder: "/static/img"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Work"
+    name: "work"
+    folder: "src/works"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false  }
+      - { label: "Id", name: "id", widget: "number" }
+      - { label: "Location", name: "location", widget: "string", required: false  }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
+      - { label: "Private Notes", name: "notes", widget: "markdown", required: false  }
+      - { label: "Production Year / Year Start", name: "year_start", widget: "number", value_type: "int", required: false }
+      - { label: "Year End (if applicable)", name: "year_end", widget: "number", value_type: "int", required: false }
+      - { label: "Width", name: "w", widget: "number", value_type: "int", required: false }
+      - { label: "Height", name: "h", widget: "number", value_type: "int", required: false }
+      - { label: "Main Image", name: "image", widget: "image", required: false }
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Quick Links"
+        name: "links"
+        file: "src/_data/quicklinks.yaml"
+        fields:
+          - label: Nav Items
+            name: links
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Description, name: desc, widget: string }
+      - label: "Meta Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Author, name: author, widget: string }
+          - { label: URL, name: url, widget: string }
